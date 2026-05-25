@@ -177,7 +177,7 @@ function App() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/generate-docs/",
+        "https://documind-backend-71bb.onrender.com/generate-docs/",
         formData
       );
 
