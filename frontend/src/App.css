@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Large Screens */
+
+@media screen and (max-width: 1400px) {
+
+  h1 {
+    word-break: break-word;
   }
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Tablets */
 
-.App-link {
-  color: #61dafb;
-}
+@media screen and (max-width: 1024px) {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  body {
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  div[style*="display: flex"] {
+    flex-direction: column !important;
   }
+
+  div[style*="width: 260px"] {
+    width: 100% !important;
+    min-height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  div[style*="flex: 1"] {
+    width: 100% !important;
+    padding: 25px !important;
+  }
+
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 34px !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 15px !important;
+  }
+
+  div[style*="width: 260px"] {
+    text-align: center;
+    padding: 20px !important;
+  }
+
+  div[style*="padding: 40px"] {
+    padding: 20px !important;
+  }
+
+  div[style*="padding: 30px"] {
+    padding: 20px !important;
+  }
+
+  div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px !important;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  div[style*="justifyContent: space-between"] {
+    flex-direction: column !important;
+    gap: 15px;
+    align-items: stretch !important;
+  }
+
+  div[style*="fontSize: \"70px\""] {
+    font-size: 50px !important;
+  }
+
+  div[style*="fontSize: \"60px\""] {
+    font-size: 36px !important;
+  }
+
+}
+
+/* Small Phones */
+
+@media screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
+  div[style*="padding: 25px"] {
+    padding: 15px !important;
+  }
+
 }
